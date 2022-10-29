@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="app.css">
+
+	<title>Incrementar Contador</title>
+</head>
+
+<body>
+	<p id="counter"> 1</p>
+	<input id="incrementar" type="button" value="Incrementar">
+	<input id="reset" type="button" value="Reset">
+
+	<script type="module">
+		import { incrementar , reset } from './mod_incrementar_reset.js';
+
+		let count = document.getElementById('counter');
+
+		const increaseBtn = document.getElementById('incrementar');
+		increaseBtn.addEventListener('click', addIncrement);
+		function addIncrement(){
+			count.innerText = incrementar(parseInt(count.innerText));	
+		};
+
+		const resetBtn = document.getElementById('reset');
+		resetBtn.addEventListener('click', resetCount);
+		function resetCount (){
+			count.innerText = reset();
+		};
+
+	</script>
+</body>
+
+</html>
