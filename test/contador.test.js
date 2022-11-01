@@ -1,3 +1,4 @@
+//   No sé si tenemos que hacer la parte de test. No lo hemos visto en la teoría.
 function sum(a, b){
   return a+b;
 }
